@@ -8,9 +8,9 @@
     "test": "vitest",
     "lint": "tsc --noEmit"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["fetch", "retry", "exponential-backoff", "network", "resilience"],
+  "author": "Subramanya KS",
+  "license": "MIT",
   "description": "",
   "devDependencies": {
     "tsup": "^8.5.1",

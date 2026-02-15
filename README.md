@@ -1,5 +1,5 @@
 # 🚀 fetch-retry-logic
-A lightweight ( < 1kb), zero-dependency wrapper for the native Fetch API that adds exponential backoff, jitter, and customizable retry logic.
+A lightweight, zero-dependency wrapper for the native Fetch API that adds exponential backoff, jitter, and customizable retry logic.
 
 ## Why use this?
 Network requests fail. Whether it's a spotty mobile connection or a temporary server overload (503), failing immediately creates a poor user experience. fetch-retry-logic helps your app stay resilient by retrying failed requests automatically.
@@ -36,7 +36,7 @@ const data = await response.json();
 ## ⚙️ Configuration Options
 
 
-| Option | Type | Default | Descreption |
+| Option | Type | Default | Description |
 |-------|-----|-----------|------|
 | retries | number | 3 |Total number of retry attempts |
 | backoff | number | 1000 | Base delay in milliseconds. Doubles each attempt.|
@@ -51,6 +51,13 @@ This library is fully tested with Vitest. To run the tests:
 npm test
 ```
 
-## 📄 License
+## Contribution
 
-MIT
+We welcome contributions! If you'd like to contribute to fetch-retry-logic, please follow our [Contribution Guidelines](https://github.com/SubramanyaKS/fetch-retry-logic/blob/main/CONTRIBUTING.md).
+
+## Author
+[Subramanya KS](https://github.com/SubramanyaKS)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
