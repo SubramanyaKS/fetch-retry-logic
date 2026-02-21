@@ -42,6 +42,7 @@ const data = await response.json();
 | backoff | number | 1000 | Base delay in milliseconds. Doubles each attempt.|
 | jitter | boolean | true | Adds a small random offset to the backoff delay. |
 | retryOn | number[] | [408, 429, 500, 502, 503, 504] |HTTP status codes that trigger a retry.|
+| maxBackoff | number | 30000 | Maximum delay in milliseconds to which backoff is clamped. |
 
 ## 🧪 Testing
 
@@ -50,6 +51,11 @@ This library is fully tested with Vitest. To run the tests:
 ```bash
 npm test
 ```
+
+Notes:
+- The `retry` object is only used by `fetchRetry` and is not forwarded to the underlying `fetch` call.
+- When a `429` response includes a `Retry-After` header, the library will honor both numeric (seconds) and HTTP-date formats.
+- If you pass an `AbortSignal` via the `signal` option, the wait between retries is abortable and will stop immediately when signalled.
 
 ## Contribution
 

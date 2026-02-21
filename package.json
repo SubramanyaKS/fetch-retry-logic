@@ -1,6 +1,6 @@
 {
   "name": "fetch-retry-logic",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Retry fetch with exponential backoff",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
